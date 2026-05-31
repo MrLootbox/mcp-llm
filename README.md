@@ -2,7 +2,7 @@
 
 MCP Chat is a command-line interface application that enables interactive chat capabilities with AI models through the Anthropic API or Local LLMs (Ollama). The application supports document retrieval, command-based prompts, and extensible tool integrations via the MCP (Model Control Protocol) architecture.
 
-The application uses local LLAMA3.2 served by ollama.
+The application is made to be hybrid and can work with both LLAMA3.2 served by ollama locally and Anthorpic Key.
 
 ## What is MCP?
 
@@ -26,6 +26,9 @@ MCP --> Resources
 MCP --> Prompts
 ```
 ## Request flow 
+
+The request-response flow includes the user/CLI , MCP client, MCP server, LLM, and the tools defined in our server.
+
 ```mermaid
 sequenceDiagram
 
