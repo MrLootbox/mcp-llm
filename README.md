@@ -1,6 +1,6 @@
 # MCP Chat
 
-MCP Chat is a command-line interface application that enables interactive chat capabilities with AI models through the Anthropic API. The application supports document retrieval, command-based prompts, and extensible tool integrations via the MCP (Model Control Protocol) architecture.
+MCP Chat is a command-line interface application that enables interactive chat capabilities with AI models through the Anthropic API or Local LLMs (Ollama). The application supports document retrieval, command-based prompts, and extensible tool integrations via the MCP (Model Control Protocol) architecture.
 
 The application uses local LLAMA3.2 served by ollama.
 
@@ -9,17 +9,25 @@ The application uses local LLAMA3.2 served by ollama.
 - Python 3.9+
 - Anthropic API Key
 (or)
-- ollama with any local modals
+- Ollama with any local modals
 
 ## Setup
 
 ### Step 1: Configure the environment variables
 
 1. Create or edit the `.env` file in the project root and verify that the following variables are set correctly:
+    1a. If you have an Anthorpic key and are planning to use Anthropic's modal for this MCP application
+        ```
+        ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
+        CLAUDE_MODEL="claude-sonnet-4-5"
+        USE_LOCAL_LLM = "false"
+        ```
+    1b. If you dont have an LLM Key and are planning to use local LLMs 
+        ```
+        USE_LOCAL_LLM = "true"
+        LOCAL_MODEL="llama3.2"  # Enter the name of the LLM modal that you have locally
+        ```
 
-```
-ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
-```
 
 ### Step 2: Install dependencies
 
