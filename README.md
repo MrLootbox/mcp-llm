@@ -16,17 +16,19 @@ The application uses local LLAMA3.2 served by ollama.
 ### Step 1: Configure the environment variables
 
 1. Create or edit the `.env` file in the project root and verify that the following variables are set correctly:
-    1a. If you have an Anthorpic key and are planning to use Anthropic's modal for this MCP application
-        ```
-        ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
-        CLAUDE_MODEL="claude-sonnet-4-5"
-        USE_LOCAL_LLM = "false"
-        ```
-    1b. If you dont have an LLM Key and are planning to use local LLMs 
-        ```
-        USE_LOCAL_LLM = "true"
-        LOCAL_MODEL="llama3.2"  # Enter the name of the LLM modal that you have locally
-        ```
+- If you have an Anthorpic key and are planning to use Anthropic's modal for this MCP application
+
+```bash
+ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
+CLAUDE_MODEL="claude-sonnet-4-5"
+USE_LOCAL_LLM = "false"
+```
+- If you dont have an LLM Key and are planning to use local LLMs 
+
+```bash
+USE_LOCAL_LLM = "true"
+LOCAL_MODEL="llama3.2"  # Enter the name of the LLM modal that you have locally
+```
 
 
 ### Step 2: Install dependencies
