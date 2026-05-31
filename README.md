@@ -4,6 +4,47 @@ MCP Chat is a command-line interface application that enables interactive chat c
 
 The application uses local LLAMA3.2 served by ollama.
 
+## What is MCP?
+
+MCP is the USB-C for AI.
+
+```mermaid
+flowchart LR
+
+AI["AI Model"]
+
+MCP["MCP"]
+
+Tools["Tools"]
+Resources["Resources"]
+Prompts["Prompts"]
+
+AI --> MCP
+
+MCP --> Tools
+MCP --> Resources
+MCP --> Prompts
+```
+## Request flow 
+```mermaid
+sequenceDiagram
+
+participant User
+participant Client
+participant LLM
+participant MCP
+participant Tool
+
+User->>Client: Ask question
+Client->>LLM: Prompt
+LLM->>Client: Need tool
+Client->>MCP: Call tool
+MCP->>Tool: Execute
+Tool-->>MCP: Result
+MCP-->>Client: Response
+Client-->>User: Final answer
+```
+
 ## Prerequisites
 
 - Python 3.9+
